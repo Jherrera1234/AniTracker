@@ -31,7 +31,7 @@ The api will be used to obtain name of the anime, episode the person is on, genr
 
 
 #### MVP 
--Create components for each page of website/app
+- Create components for each page of website/app
 - Make an edit possible for existing anime as well as push new anime to api
 - Be able to move from one page to another
 - Transfer data from one page to another and display it on page
@@ -62,21 +62,17 @@ The api will be used to obtain name of the anime, episode the person is on, genr
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Create react app and | H | 3.5hrs| 3.5hrs | 3.5hrs |
-| Connecting the api to my laptop | H | 1.5hrs| 1.5hrs | 1.5hrs |
+| Create react app and add axios and react-router-dom| H | 0.5hr| 0.5hrs | 0.5hrs |
+| Connect api to the react app and encode the api key make sure it works| H | 2hrs| 2hrs | 2hrs |
 | Retrieve data and test to see the data connects | H | 3hrs| 3hrs | 2.5hrs |
-| Make button and search of the user | H | 1.5hrs| 1.5hrs | 1.5hrs |
-| Render data into an array | H | 4hrs| 4hrs | 4hrs |
-| Push data to search and button| H | 5hrs| 5hrs | 2.5hrs |
+| Make routes from one page to the next| H | 2.5hrs| 2.5hrs | 2.5hrs |
+| Make edit page and make sure it pushes and the data to the api | H | 4hrs| 4hrs | 4hrs |
+| Add event listeners so I can go from one page to the next| H | 5hrs| 5hrs | 2.5hrs |
 | Testing | M | 3hrs| 3hrs | 3hrs |
-| Add css to the data | H | 3hrs| 2.5hrs | 2.5hrs |
-| Add Flex box and flex styling | H | 3hrs| 3hrs | 2.5hrs |
+| Debugging | H | 3hrs| 2.5hrs | 2.5hrs |
 | delete data when a new search is made| H | 3hrs| 3hrs | 2.5hrs |
 | Add css styling to website | M| 4.5hrs| 4.5hrs | 4.5hrs |
 | deploy website | H | 1hrs| 1hrs | 1hrs |
-| Add extra css styling | L | 3hrs| 3hrs | 2.5hrs |
 | Total | H | 40hrs| 40hrs | 5hrs |
 
 
-## SWOT Analysis
-My strengths will bbe the javascript and logic for the most part. I will be some what weak in rendering data to the pages and css styling in general. I hope to tackle the rendering and linking of each page through out this porject weak and the styling.
