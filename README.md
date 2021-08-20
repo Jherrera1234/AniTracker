@@ -1,4 +1,4 @@
-# AniTracker
+# aniTracker
 
 ## Project Description
 
