@@ -3,8 +3,9 @@ import { baseURL, config } from './services'
 
 function Anime(props) {
 
+
   return (
-    <h1>This is working</h1>
+    <h1>{props.genre}</h1>
   )
 
 

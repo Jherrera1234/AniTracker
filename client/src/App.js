@@ -6,16 +6,25 @@ import Anime from './Anime'
 
 function App() {
   const [anime, setAnime] = useState([])
+  const [genre, setGenre] = useState([])
   const [toggleFetch, setToggleFetch] = useState(false)
 
+  let arrOfGenres = ['Shonen', 'Isekai', 'Horror', 'Slice of Life']
+
   useEffect(() => {
+    const fetchGenres = () => {
+      setGenre(arrOfGenres)
+
+    }
     const fetchAnime = async () => {
       const resp = await axios.get(baseURL, config)
       console.log(resp.data.records)
       setAnime(resp.data.records)
     }
     fetchAnime()
+    fetchGenres()
   }, [])
+
 
   return (
     <>
@@ -24,9 +33,9 @@ function App() {
         <Link to='/new' className='new-naw'>Add New Anime</Link>
       </nav>
       <Route path='/' exact>
-        {anime.map((anime, index) => {
+        {genre.map((genre, index) => {
           return (
-            <Anime key={index} anime={anime} setToggleFetch={setToggleFetch} />
+            <Anime key={index} genre={genre} setToggleFetch={setToggleFetch} />
           )
         })
 
