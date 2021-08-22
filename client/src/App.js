@@ -3,7 +3,7 @@ import axios from 'axios'
 import { baseURL, config } from './services'
 import { Route, Link } from 'react-router-dom'
 import Anime from './Anime'
-
+import Form from './Form'
 function App() {
   const [anime, setAnime] = useState([])
   const [genre, setGenre] = useState([])
@@ -23,12 +23,12 @@ function App() {
     }
     fetchAnime()
     fetchGenres()
-  }, [])
+  }, [toggleFetch])
 
 
   return (
     <>
-      <nav class='nav-bar' >
+      <nav className='nav-bar' >
         <Link to='/' className='home-nav' >Home </Link>
         <Link to='/new' className='new-naw'>Add New Anime</Link>
       </nav>
@@ -41,6 +41,10 @@ function App() {
 
         }
 
+      </Route>
+
+      <Route path='/new'>
+        <Form setToggleFetch={setToggleFetch} anime={anime} />
       </Route>
 
 
