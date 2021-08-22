@@ -7,16 +7,49 @@ function Form(props) {
   const [name, setName] = useState('')
   const [episodes, setEpisodes] = useState('')
   const [genre, setGenre] = useState('')
-  const [watchStatus, setWatchStatus] = useState('')
-  const [linkToAnime, setLinkToAnime] = useState('')
+  const [watchstatus, setWatchStatus] = useState('')
+  const [linktoAnime, setLinkToAnime] = useState('')
   const [rating, setRating] = useState('')
 
   const params = useParams()
 
+  // useEffect(() => {
+  //   if (props.anime.length > 0) {
+
+  //     setName(props.anime.fields.name)
+  //     setEpisodes(props.anime.fields.episodes)
+  //     setGenre(props.anime.fields.genre)
+  //     setWatchStatus(props.anime.fields.watchstatus)
+  //     setLinkToAnime(props.anime.fields.linktoanime)
+  //     setRating(props.anime.fields.rating)
+  //   }
+  // }, [props.anime])
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    const newAnime = {
+      name,
+      episodes,
+      genre,
+      watchstatus,
+      linktoAnime,
+      rating
+    }
+    await axios.post(baseURL, { fields: newAnime }, config)
+    props.setToggleFetch(prevToggleFetch => !prevToggleFetch)
+  }
 
 
   return (
-    <h1>This is my form</h1>
+    <form onSubmit={handleSubmit}>
+      <label htmlFor='name'>Name: </label>
+      <input
+        id='name'
+        type='text'
+        onChange={(e) => setName(e.target.value)}
+        value={name}
+      />
+      <button type='submit'>Submit</button>
+    </form>
   )
 }
 
