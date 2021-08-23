@@ -4,6 +4,7 @@ import { baseURL, config } from './services'
 import { Route, Link } from 'react-router-dom'
 import Anime from './Anime'
 import Form from './Form'
+import Genre from './Genre'
 function App() {
   const [anime, setAnime] = useState([])
   const [genre, setGenre] = useState([])
@@ -45,6 +46,16 @@ function App() {
 
       <Route path='/new'>
         <Form setToggleFetch={setToggleFetch} anime={anime} />
+      </Route>
+
+      <Route path='/genre/:genre'>
+        {anime.map((anime, index) => {
+          return (
+            < Genre key={index} anime={anime} setToggleFetch={setToggleFetch} />
+          )
+        })
+
+        }
       </Route>
 
 
