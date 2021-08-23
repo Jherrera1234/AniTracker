@@ -5,6 +5,7 @@ import { Route, Link } from 'react-router-dom'
 import Anime from './Anime'
 import Form from './Form'
 import Genre from './Genre'
+import Show from './Show'
 function App() {
   const [anime, setAnime] = useState([])
   const [genre, setGenre] = useState([])
@@ -21,6 +22,7 @@ function App() {
       const resp = await axios.get(baseURL, config)
       // console.log(resp.data.records)
       setAnime(resp.data.records)
+      console.log(resp.data.records)
     }
     fetchAnime()
     fetchGenres()
@@ -49,16 +51,11 @@ function App() {
       </Route>
 
       <Route path='/genre/:genre'>
-        {/* {anime.map((anime, index) => {
-          return (
-            <Genre key={index} anime={anime} setToggleFetch={setToggleFetch} />
-          )
-        })
-        } */}
-        <Genre anime={anime} setToggleFetch={setToggleFetch} />
+        <Genre anime={anime} />
       </Route>
+
       <Route path='/show/:id'>
-        <Show />
+        <Show anime={anime} />
       </Route>
 
 
