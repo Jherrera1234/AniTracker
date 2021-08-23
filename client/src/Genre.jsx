@@ -71,7 +71,7 @@ function Genre(props) {
             <h3>{anime.fields.watchstatus}</h3>
             <h3>{anime.fields.linktoanime}</h3>
             <h3>{anime.fields.rating}</h3>
-            <Link></Link>
+            <Link to={`/show/${anime.id}`}>Link to Show</Link>
           </div>
         ))
       }
