@@ -19,7 +19,7 @@ function App() {
     }
     const fetchAnime = async () => {
       const resp = await axios.get(baseURL, config)
-      console.log(resp.data.records)
+      // console.log(resp.data.records)
       setAnime(resp.data.records)
     }
     fetchAnime()
@@ -49,14 +49,15 @@ function App() {
       </Route>
 
       <Route path='/genre/:genre'>
-        {anime.map((anime, index) => {
+        {/* {anime.map((anime, index) => {
           return (
-            < Genre key={index} anime={anime} setToggleFetch={setToggleFetch} />
+            <Genre key={index} anime={anime} setToggleFetch={setToggleFetch} />
           )
         })
-
-        }
+        } */}
+        <Genre anime={anime} setToggleFetch={setToggleFetch} />
       </Route>
+
 
 
     </>
