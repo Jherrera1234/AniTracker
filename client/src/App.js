@@ -57,7 +57,9 @@ function App() {
         } */}
         <Genre anime={anime} setToggleFetch={setToggleFetch} />
       </Route>
-
+      <Route path='/show/:id'>
+        <Show />
+      </Route>
 
 
     </>
