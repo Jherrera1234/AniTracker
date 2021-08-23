@@ -2,7 +2,7 @@
 
 ## Project Description
 
-The porject will be using react to make an app that tracks what a user watches pretaining to anime. The user will be able to navaigate a home page that list the genre of anime and be able to click the banner images to go to the genre page of the specific genre. The user will then have the list of anime they have watched in card style. The user will then be able to click on the anime there will be a button to edit, add or delete the anime. 
+The project will be using react to make an app that tracks what a user watches pretaining to anime. The user will be able to navaigate a home page that list the genre of anime and be able to click the banner images to go to the genre page of the specific genre. The user will then have the list of anime they have watched in card style. The user will then be able to click on the anime there will be a button to edit, add or delete the anime. 
 
 ## Wireframe
 
@@ -32,7 +32,9 @@ The api will be used to obtain name of the anime, episode the person is on, genr
 
 #### MVP 
 - Create components for each page of website/app
+- Be a working, interactive React app, built using create react app
 - Make an edit possible for existing anime as well as push new anime to api
+- Have at least 6 separate, rendered components.
 - Be able to move from one page to another
 - Transfer data from one page to another and display it on page
 - Make react banners for each anime and genre
