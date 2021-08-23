@@ -11,12 +11,30 @@ function Show(props) {
   const matchShow = props.anime.filter((ani) => {
     return ani.id === params.id
   })
-  console.log(matchShow)
+  // console.log(matchShow.id)
+
+
+  const handleDelete = async () => {
+    await axios.delete(`${baseURL}/show/${params.id}`, config)
+    props.setToggleFetch(prevToggleFetch => !prevToggleFetch)
+  }
 
   return (
     <article>
-      <h1>This is proof that my show page works</h1>
-      {/* <h1>{props.anime.fields.name}</h1> */}
+      {
+        matchShow.map((anime) => (
+          <div>
+            <h2>{anime.fields.name}</h2>
+            <h3>{anime.fields.episodes}</h3>
+            <h3>{anime.fields.genre}</h3>
+            <h3>{anime.fields.watchstatus}</h3>
+            <h3>{anime.fields.linktoanime}</h3>
+            <h3>{anime.fields.rating}</h3>
+            <Link to={`/edit/${anime.id}`}>Link to Edit</Link>
+          </div>
+        ))
+      }
+      <button onClick={handleDelete}>Delete Anime</button>
     </article>
   )
 

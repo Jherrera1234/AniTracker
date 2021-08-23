@@ -58,6 +58,10 @@ function App() {
         <Show anime={anime} />
       </Route>
 
+      <Route path='/edit/:id'>
+        <Form setToggleFetch={setToggleFetch} anime={anime} />
+      </Route>
+
 
     </>
   );
