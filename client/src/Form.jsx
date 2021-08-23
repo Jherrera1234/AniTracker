@@ -8,7 +8,7 @@ function Form(props) {
   const [episodes, setEpisodes] = useState('')
   const [genre, setGenre] = useState('')
   const [watchstatus, setWatchStatus] = useState('')
-  const [linktoAnime, setLinkToAnime] = useState('')
+  const [linktoanime, setLinkToAnime] = useState('')
   const [rating, setRating] = useState('')
 
   const params = useParams()
@@ -31,9 +31,10 @@ function Form(props) {
       episodes,
       genre,
       watchstatus,
-      linktoAnime,
+      linktoanime,
       rating
     }
+    console.log(newAnime)
     await axios.post(baseURL, { fields: newAnime }, config)
     props.setToggleFetch(prevToggleFetch => !prevToggleFetch)
   }
@@ -48,6 +49,42 @@ function Form(props) {
         onChange={(e) => setName(e.target.value)}
         value={name}
       />
+      <label htmlFor='episodes'>Episodes: </label>
+      <input
+        id='episodes'
+        type='text'
+        onChange={(e) => setEpisodes(e.target.value)}
+        value={episodes}
+      />
+      <label htmlFor='genre'>Genre: </label>
+      <input
+        id='genre'
+        type='text'
+        onChange={(e) => setGenre(e.target.value)}
+        value={genre}
+      />
+      <label htmlFor='watchstatus'>Watch Status: </label>
+      <input
+        id='watch-status'
+        type='text'
+        onChange={(e) => setWatchStatus(e.target.value)}
+        value={watchstatus}
+      />
+      <label htmlFor='link-to-anime'>Link to Anime: </label>
+      <input
+        id='link-to-anime'
+        type='text'
+        onChange={(e) => setLinkToAnime(e.target.value)}
+        value={linktoanime}
+      />
+      <label htmlFor='rating'>Rating: </label>
+      <input
+        id='rating'
+        type='number'
+        onChange={(e) => setRating(e.target.valueAsNumber)}
+        value={rating}
+      />
+
       <button type='submit'>Submit</button>
     </form>
   )
