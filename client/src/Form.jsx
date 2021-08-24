@@ -2,7 +2,9 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { baseURL, config } from './services'
 import { useParams } from 'react-router-dom'
-
+import DropdownButton from 'react-bootstrap/DropdownButton'
+import Dropdown from 'react-bootstrap/Dropdown'
+import { arrOfGenres, arrOfWatchStatus } from './storage'
 function Form(props) {
   const [name, setName] = useState('')
   const [episodes, setEpisodes] = useState('')
@@ -46,7 +48,7 @@ function Form(props) {
     props.setToggleFetch(prevToggleFetch => !prevToggleFetch)
 
   }
-
+  // console.log(arrOfGenres)
 
   return (
     <form onSubmit={handleSubmit}>
@@ -64,24 +66,34 @@ function Form(props) {
         onChange={(e) => setEpisodes(e.target.value)}
         value={episodes}
       />
+
       <label htmlFor='genre'>Genre: </label>
-      <input
-        id='genre'
-        type='text'
-        onChange={(e) => setGenre(e.target.value)}
-        value={genre}
-      />
+      <select id='genre' onChange={(e) => setGenre(e.target.value)}>
+        {arrOfGenres.map((genre) => {
+          return (
+            <option value={genre}>{genre}</option>
+          )
+        })
+        }
+      </select>
+
+
+
       <label htmlFor='watchstatus'>Watch Status: </label>
-      <input
-        id='watch-status'
-        type='text'
-        onChange={(e) => setWatchStatus(e.target.value)}
-        value={watchstatus}
-      />
+      <select id='watchstatus' onChange={(e) => setWatchStatus(e.target.value)}>
+
+        {arrOfWatchStatus.map((watchstatus) => {
+          return (
+            <option value={watchstatus}>{watchstatus}</option>
+
+          )
+        })
+        }
+      </select>
       <label htmlFor='link-to-anime'>Link to Anime: </label>
       <input
         id='link-to-anime'
-        type='text'
+        type='url'
         onChange={(e) => setLinkToAnime(e.target.value)}
         value={linktoanime}
       />
@@ -89,11 +101,16 @@ function Form(props) {
       <input
         id='rating'
         type='number'
+        min={0}
+        max={5}
+        width='145px'
         onChange={(e) => setRating(e.target.valueAsNumber)}
         value={rating}
       />
 
+
       <button type='submit'>Submit</button>
+
     </form>
   )
 }

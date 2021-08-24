@@ -6,9 +6,12 @@ import Anime from './Anime'
 import Form from './Form'
 import Genre from './Genre'
 import Show from './Show'
+import { arrOfGenresOptions } from './storage'
+
 function App() {
   const [anime, setAnime] = useState([])
   const [genre, setGenre] = useState([])
+  const [genreSelect, setGenreSelect] = useState('')
   const [toggleFetch, setToggleFetch] = useState(false)
 
   let arrOfGenres = ['Shonen', 'Isekai', 'Horror', 'Slice of Life']
@@ -16,6 +19,7 @@ function App() {
   useEffect(() => {
     const fetchGenres = () => {
       setGenre(arrOfGenres)
+
 
     }
     const fetchAnime = async () => {
@@ -28,6 +32,11 @@ function App() {
     fetchGenres()
   }, [toggleFetch])
 
+  const handleSubmit = ((event) => {
+    event.preventDefault()
+
+  })
+
 
   return (
     <>
@@ -36,12 +45,28 @@ function App() {
         <Link to='/new' className='new-naw'>Add New Anime</Link>
       </nav>
       <Route path='/' exact>
-        {genre.map((genre, index) => {
-          return (
-            <Anime key={index} genre={genre} setToggleFetch={setToggleFetch} />
-          )
-        })
+        <form onSubmit={handleSubmit}>
+          <label htmlFor='genres'>Genre: </label>
+          <select id='genres' onChange={(e) => setGenreSelect(e.target.value)}>
 
+            {arrOfGenresOptions.map((genre) => {
+              return (
+                <option value={genreSelect}>{genre}</option>
+
+              )
+            })
+            }
+          </select>
+          <button type='submit'>Submit</button>
+        </form>
+
+        {
+
+          genre.map((genre, index) => {
+            return (
+              <Anime key={index} genre={genre} setToggleFetch={setToggleFetch} genreSelect={genreSelect} />
+            )
+          })
         }
 
       </Route>
