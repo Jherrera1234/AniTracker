@@ -34,6 +34,7 @@ function Show(props) {
           </div>
         ))
       }
+      <br />
       <button onClick={handleDelete}>Delete Anime</button>
     </article>
   )

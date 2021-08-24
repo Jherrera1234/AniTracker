@@ -13,17 +13,21 @@ function Form(props) {
 
   const params = useParams()
 
-  // useEffect(() => {
-  //   if (props.anime.length > 0) {
+  useEffect(() => {
+    if (params.id && props.anime.length > 0) {
+      const aniToEdit = props.anime.find(ani => params.id === ani.id)
+      if (aniToEdit) {
+        setName(aniToEdit.fields.name)
+        setEpisodes(aniToEdit.fields.episodes)
+        setGenre(aniToEdit.fields.genre)
+        setWatchStatus(aniToEdit.fields.watchstatus)
+        setLinkToAnime(aniToEdit.fields.linktoanime)
+        setRating(aniToEdit.fields.rating)
+      }
+    }
+  }, [props.anime])
 
-  //     setName(props.anime.fields.name)
-  //     setEpisodes(props.anime.fields.episodes)
-  //     setGenre(props.anime.fields.genre)
-  //     setWatchStatus(props.anime.fields.watchstatus)
-  //     setLinkToAnime(props.anime.fields.linktoanime)
-  //     setRating(props.anime.fields.rating)
-  //   }
-  // }, [props.anime])
+
   const handleSubmit = async (event) => {
     event.preventDefault()
     const newAnime = {
@@ -34,9 +38,13 @@ function Form(props) {
       linktoanime,
       rating
     }
-    console.log(newAnime)
-    await axios.post(baseURL, { fields: newAnime }, config)
+    if (params.id) {
+      await axios.put(`${baseURL}/${params.id}`, { fields: newAnime }, config)
+    } else {
+      await axios.post(baseURL, { fields: newAnime }, config)
+    }
     props.setToggleFetch(prevToggleFetch => !prevToggleFetch)
+
   }
 
 
