@@ -15,7 +15,7 @@ function Show(props) {
 
 
   const handleDelete = async () => {
-    await axios.delete(`${baseURL}/show/${params.id}`, config)
+    await axios.delete(`${baseURL}/${params.id}`, config)
     props.setToggleFetch(prevToggleFetch => !prevToggleFetch)
   }
 
