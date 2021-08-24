@@ -45,7 +45,7 @@ function App() {
         <form >
           <label htmlFor='genres'>Genre: </label>
           <select id='genres' onChange={(e) => setGenreSelect(e.target.value)}>
-
+            <option value='1' disabled>Select an Anime</option>
             {arrOfGenresOptions.map((genre) => {
               return (
                 <option value={genre}>{genre}</option>

@@ -69,6 +69,7 @@ function Form(props) {
 
       <label htmlFor='genre'>Genre: </label>
       <select id='genre' onChange={(e) => setGenre(e.target.value)}>
+        <option value='1' disabled>Select a Genre</option>
         {arrOfGenres.map((genre) => {
           return (
             <option value={genre}>{genre}</option>
@@ -81,7 +82,7 @@ function Form(props) {
 
       <label htmlFor='watchstatus'>Watch Status: </label>
       <select id='watchstatus' onChange={(e) => setWatchStatus(e.target.value)}>
-
+        <option value='1' disabled>Watch Status</option>
         {arrOfWatchStatus.map((watchstatus) => {
           return (
             <option value={watchstatus}>{watchstatus}</option>
