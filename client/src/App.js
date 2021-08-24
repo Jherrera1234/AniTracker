@@ -32,10 +32,7 @@ function App() {
     fetchGenres()
   }, [toggleFetch])
 
-  const handleSubmit = ((event) => {
-    event.preventDefault()
 
-  })
 
 
   return (
@@ -45,30 +42,20 @@ function App() {
         <Link to='/new' className='new-naw'>Add New Anime</Link>
       </nav>
       <Route path='/' exact>
-        <form onSubmit={handleSubmit}>
+        <form >
           <label htmlFor='genres'>Genre: </label>
           <select id='genres' onChange={(e) => setGenreSelect(e.target.value)}>
 
             {arrOfGenresOptions.map((genre) => {
               return (
-                <option value={genreSelect}>{genre}</option>
+                <option value={genre}>{genre}</option>
 
               )
             })
             }
           </select>
-          <button type='submit'>Submit</button>
         </form>
-
-        {
-
-          genre.map((genre, index) => {
-            return (
-              <Anime key={index} genre={genre} setToggleFetch={setToggleFetch} genreSelect={genreSelect} />
-            )
-          })
-        }
-
+        <Anime genre={genre} setToggleFetch={setToggleFetch} genreSelect={genreSelect} />
       </Route>
 
       <Route path='/new'>
