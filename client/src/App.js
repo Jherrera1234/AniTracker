@@ -6,6 +6,7 @@ import Anime from './Anime'
 import Form from './Form'
 import Genre from './Genre'
 import Show from './Show'
+import Nav from './Nav'
 import { arrOfGenresOptions } from './storage'
 
 function App() {
@@ -37,10 +38,7 @@ function App() {
 
   return (
     <>
-      <nav className='nav-bar' >
-        <Link to='/' className='home-nav' >Home </Link>
-        <Link to='/new' className='new-naw'>Add New Anime</Link>
-      </nav>
+      <Nav />
       <Route path='/' exact>
         <form >
           <label htmlFor='genres'>Genre: </label>
@@ -67,7 +65,7 @@ function App() {
       </Route>
 
       <Route path='/show/:id'>
-        <Show anime={anime} />
+        <Show anime={anime} setToggleFetch={setToggleFetch} />
       </Route>
 
       <Route path='/edit/:id'>

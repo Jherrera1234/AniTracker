@@ -1,12 +1,13 @@
 import axios from 'axios'
 import { Link, useParams } from 'react-router-dom'
 import { baseURL, config } from './services'
-import { useEffect } from 'react-router-dom'
+import { useEffect, useHistory } from 'react-router-dom'
 
 function Show(props) {
   // const { name } = props.anime.fields
 
   const params = useParams()
+  const history = useHistory()
 
   const matchShow = props.anime.filter((ani) => {
     return ani.id === params.id
@@ -17,6 +18,7 @@ function Show(props) {
   const handleDelete = async () => {
     await axios.delete(`${baseURL}/${params.id}`, config)
     props.setToggleFetch(prevToggleFetch => !prevToggleFetch)
+    history.push('/')
   }
 
   return (
