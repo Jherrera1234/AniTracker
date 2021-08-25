@@ -7,7 +7,9 @@ import Form from './Form'
 import Genre from './Genre'
 import Show from './Show'
 import Nav from './Nav'
+import Footer from './Footer'
 import { arrOfGenresOptions } from './storage'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [anime, setAnime] = useState([])
@@ -37,7 +39,7 @@ function App() {
 
 
   return (
-    <>
+    <div>
       <Nav />
       <Route path='/' exact>
         <form >
@@ -72,8 +74,9 @@ function App() {
         <Form setToggleFetch={setToggleFetch} anime={anime} />
       </Route>
 
+      <Footer />
 
-    </>
+    </div>
   );
 }
 

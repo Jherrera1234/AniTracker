@@ -1,0 +1,12 @@
+.card-img-left{
+  width:350px;
+  height: 205px;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+}
+.card img {
+  width: 30%;
+}
