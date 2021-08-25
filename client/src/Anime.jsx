@@ -93,9 +93,6 @@ function Anime(props) {
     <>
       {getGenre()}
 
-
-
-
     </>
   )
 }

@@ -51,8 +51,10 @@ function Form(props) {
 
   return (
     <div className='form-div'>
+
       <img className='form-left-image' src='https://cdn.vox-cdn.com/thumbor/K_FshrR6dUnRvEIXg0_U82uBDxM=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/20009065/visual_01.jpg' />
-      <form onSubmit={handleSubmit}>
+
+      <form className='form-sub' onSubmit={handleSubmit}>
         <label htmlFor='name'>Name: </label>
         <input
           id='name'
@@ -60,6 +62,7 @@ function Form(props) {
           onChange={(e) => setName(e.target.value)}
           value={name}
         />
+
         <label htmlFor='episodes'>Episodes: </label>
         <input
           id='episodes'
@@ -79,8 +82,6 @@ function Form(props) {
           }
         </select>
 
-
-
         <label htmlFor='watchstatus'>Watch Status: </label>
         <select id='watchstatus' onChange={(e) => setWatchStatus(e.target.value)}>
           <option value='1' disabled>Watch Status</option>
@@ -92,6 +93,7 @@ function Form(props) {
           })
           }
         </select>
+
         <label htmlFor='link-to-anime'>Link to Anime: </label>
         <input
           id='link-to-anime'
@@ -110,10 +112,11 @@ function Form(props) {
           value={rating}
         />
 
-
         <button type='submit'>Submit</button>
-        <img className='form-right-image' src='https://sir.wdwnt.com/wdwnt.com/2021/05/U/S/d/USJ_OnePiecePremiereShow_1-5569297-scaled.jpg' />
+
       </form>
+      <img className='form-right-image' src='https://sir.wdwnt.com/wdwnt.com/2021/05/U/S/d/USJ_OnePiecePremiereShow_1-5569297-scaled.jpg' />
+
     </div>
   )
 }
