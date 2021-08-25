@@ -2,9 +2,8 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { baseURL, config } from './services'
 import { useParams } from 'react-router-dom'
-import DropdownButton from 'react-bootstrap/DropdownButton'
-import Dropdown from 'react-bootstrap/Dropdown'
 import { arrOfGenres, arrOfWatchStatus } from './storage'
+import './Form.css'
 function Form(props) {
   const [name, setName] = useState('')
   const [episodes, setEpisodes] = useState('')
@@ -52,6 +51,7 @@ function Form(props) {
 
   return (
     <div className='form-div'>
+      <img className='form-left-image' src='https://cdn.vox-cdn.com/thumbor/K_FshrR6dUnRvEIXg0_U82uBDxM=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/20009065/visual_01.jpg' />
       <form onSubmit={handleSubmit}>
         <label htmlFor='name'>Name: </label>
         <input
@@ -112,7 +112,7 @@ function Form(props) {
 
 
         <button type='submit'>Submit</button>
-
+        <img className='form-right-image' src='https://sir.wdwnt.com/wdwnt.com/2021/05/U/S/d/USJ_OnePiecePremiereShow_1-5569297-scaled.jpg' />
       </form>
     </div>
   )
