@@ -19,14 +19,13 @@ function Genre(props) {
       {
         matchAnime.map((anime) => (
           <div>
-            <Card style={{ width: '100%' }}>
+            <Card id='card-genre' style={{ width: '100%' }}>
               <Card.Img variant="left" src="holder.js/100px180" src="https://i.ibb.co/VW6vSFw/Ani-logo.png" />
               <Card.Body>
                 <Card.Title>{anime.fields.genre}</Card.Title>
                 <Card.Text>
-                  {anime.fields.name}
-                  {anime.fields.episodes}
-                  {anime.fields.rating}
+                  {`Name:${anime.fields.name} Episodes:${anime.fields.episodes} Rating:${anime.fields.rating}`}
+
                 </Card.Text>
                 <Link to={`/show/${anime.id}`}>Link to Show</Link>
               </Card.Body>

@@ -3,10 +3,8 @@
   height: 205px;
 }
 
-.card {
+#card-genre {
   display: flex;
   flex-direction: row;
-}
-.card img {
-  width: 30%;
+  justify-content: space-around;
 }

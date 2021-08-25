@@ -1,0 +1,11 @@
+
+.show-article{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.delete-button{
+width:250px;
+}

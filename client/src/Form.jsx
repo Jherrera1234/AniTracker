@@ -51,68 +51,70 @@ function Form(props) {
   // console.log(arrOfGenres)
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor='name'>Name: </label>
-      <input
-        id='name'
-        type='text'
-        onChange={(e) => setName(e.target.value)}
-        value={name}
-      />
-      <label htmlFor='episodes'>Episodes: </label>
-      <input
-        id='episodes'
-        type='text'
-        onChange={(e) => setEpisodes(e.target.value)}
-        value={episodes}
-      />
+    <div className='form-div'>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor='name'>Name: </label>
+        <input
+          id='name'
+          type='text'
+          onChange={(e) => setName(e.target.value)}
+          value={name}
+        />
+        <label htmlFor='episodes'>Episodes: </label>
+        <input
+          id='episodes'
+          type='text'
+          onChange={(e) => setEpisodes(e.target.value)}
+          value={episodes}
+        />
 
-      <label htmlFor='genre'>Genre: </label>
-      <select id='genre' onChange={(e) => setGenre(e.target.value)}>
-        <option value='1' disabled>Select a Genre</option>
-        {arrOfGenres.map((genre) => {
-          return (
-            <option value={genre}>{genre}</option>
-          )
-        })
-        }
-      </select>
-
-
-
-      <label htmlFor='watchstatus'>Watch Status: </label>
-      <select id='watchstatus' onChange={(e) => setWatchStatus(e.target.value)}>
-        <option value='1' disabled>Watch Status</option>
-        {arrOfWatchStatus.map((watchstatus) => {
-          return (
-            <option value={watchstatus}>{watchstatus}</option>
-
-          )
-        })
-        }
-      </select>
-      <label htmlFor='link-to-anime'>Link to Anime: </label>
-      <input
-        id='link-to-anime'
-        type='url'
-        onChange={(e) => setLinkToAnime(e.target.value)}
-        value={linktoanime}
-      />
-      <label htmlFor='rating'>Rating: </label>
-      <input
-        id='rating'
-        type='number'
-        min={0}
-        max={5}
-        width='145px'
-        onChange={(e) => setRating(e.target.valueAsNumber)}
-        value={rating}
-      />
+        <label htmlFor='genre'>Genre: </label>
+        <select id='genre' onChange={(e) => setGenre(e.target.value)}>
+          <option value='1' disabled>Select a Genre</option>
+          {arrOfGenres.map((genre) => {
+            return (
+              <option value={genre}>{genre}</option>
+            )
+          })
+          }
+        </select>
 
 
-      <button type='submit'>Submit</button>
 
-    </form>
+        <label htmlFor='watchstatus'>Watch Status: </label>
+        <select id='watchstatus' onChange={(e) => setWatchStatus(e.target.value)}>
+          <option value='1' disabled>Watch Status</option>
+          {arrOfWatchStatus.map((watchstatus) => {
+            return (
+              <option value={watchstatus}>{watchstatus}</option>
+
+            )
+          })
+          }
+        </select>
+        <label htmlFor='link-to-anime'>Link to Anime: </label>
+        <input
+          id='link-to-anime'
+          type='url'
+          onChange={(e) => setLinkToAnime(e.target.value)}
+          value={linktoanime}
+        />
+        <label htmlFor='rating'>Rating: </label>
+        <input
+          id='rating'
+          type='number'
+          min={0}
+          max={5}
+          width='145px'
+          onChange={(e) => setRating(e.target.valueAsNumber)}
+          value={rating}
+        />
+
+
+        <button type='submit'>Submit</button>
+
+      </form>
+    </div>
   )
 }
 
