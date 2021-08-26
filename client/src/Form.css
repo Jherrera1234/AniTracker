@@ -52,7 +52,7 @@
   }
   .form-left-image, .form-right-image{
     width: 40%;
-    height:50vh;
+    height:150vh;
   
   }
   .form-sub{
@@ -61,7 +61,7 @@
     flex-direction: column;
     text-align: center;
     width: 33vh;
-    margin: 0px 10px 500px 10px;
+    margin: 20px 10px 500px 10px;
   }
 } 
 
