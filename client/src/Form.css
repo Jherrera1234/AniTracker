@@ -6,7 +6,7 @@
 }
 
 .form-left-image, .form-right-image{
-  width: 300px;
+  width: 33vh;
   height:1000px;
 
 }
@@ -16,7 +16,7 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  width: 300px;
+  width: 75vh;
   margin: 0px 10px 500px 10px;
 }
 

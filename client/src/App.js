@@ -17,14 +17,10 @@ function App() {
   const [genreSelect, setGenreSelect] = useState('')
   const [toggleFetch, setToggleFetch] = useState(false)
 
-  let arrOfGenres = ['Shonen', 'Isekai', 'Horror', 'Slice of Life']
+  let arrOfGenres = ['Shonen', 'Isekai', 'Horror', 'Slice-of-Life']
 
   useEffect(() => {
-    const fetchGenres = () => {
-      setGenre(arrOfGenres)
 
-
-    }
     const fetchAnime = async () => {
       const resp = await axios.get(baseURL, config)
       // console.log(resp.data.records)
@@ -32,7 +28,7 @@ function App() {
       console.log(resp.data.records)
     }
     fetchAnime()
-    fetchGenres()
+    // setGenre(arrOfGenres)
   }, [toggleFetch])
 
 
@@ -44,8 +40,8 @@ function App() {
       <Route path='/' exact>
         <form >
           <label htmlFor='genres'>Genre: </label>
-          <select id='genres' onChange={(e) => setGenreSelect(e.target.value)}>
-            <option value='1' disabled>Select an Anime</option>
+          <select id='genres' onChange={(e) => setGenreSelect(e.target.value)} required>
+            <option value='' >Select an Anime</option>
             {arrOfGenresOptions.map((genre) => {
               return (
                 <option value={genre}>{genre}</option>
@@ -55,7 +51,7 @@ function App() {
             }
           </select>
         </form>
-        <Anime genre={genre} setToggleFetch={setToggleFetch} genreSelect={genreSelect} />
+        <Anime genre={arrOfGenres} setToggleFetch={setToggleFetch} genreSelect={genreSelect} />
       </Route>
 
       <Route path='/new'>

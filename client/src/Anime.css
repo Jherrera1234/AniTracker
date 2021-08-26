@@ -2,3 +2,37 @@
 width: 1200px;
 height: 250px;
 }
+
+.Shonen-card{
+  background-image: url("https://gonintendo.com/uploads/file_upload/upload/70594/Featured-Image-Shonen-Jump-wrong-better-Cropped.jpg");
+  height: 25vh;
+
+}
+
+.Isekai-card{
+  background-image: url("https://i0.wp.com/recommendmeanime.com/wp-content/uploads/2019/04/isekai-quartet-anime.jpeg?fit=1200%2C673&ssl=1");
+  height: 25vh;
+
+}
+
+.Horror-card{
+  background-image: url("https://thegeekiary.com/wp-content/uploads/2018/01/Shito.jpg");
+  height: 25vh;
+
+}
+
+.Slice-of-Life-card{
+  background-image: url("https://1.bp.blogspot.com/-6EGG_gLqjwc/XSZz8dTroEI/AAAAAAAAAxU/OzzaU-nL2-IhnRT-H1oRwUcHEmrpPE3ywCLcBGAs/s1600/Hyouka.jpg");
+  height: 25vh;
+}
+
+
+.Shonen-card, .Isekai-card, .Horror-card,.Slice-of-Life-card{
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.Shonen-link, .Isekai-link, .Horror-link,.Slice-of-Life-link{
+  font-size: 30px;
+}

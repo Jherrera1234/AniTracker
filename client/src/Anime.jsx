@@ -10,9 +10,10 @@ function Anime(props) {
     if (props.genreSelect === arrOfGenresOptions[0]) {
       const allGenres = props.genre.map((genre, index) => {
         return (
-          <div>
+          <div className={`${genre}-card`}>
             <h1 className={`genre-${index}`} >{genre}</h1>
-            <Link to={`/genre/${genre}`}> Go To Genre</Link>
+            <br />
+            <Link className={`${genre}-link`} to={`/genre/${genre}`}> Go To Genre Page</Link>
 
             {/* <Card className={`genre-${index}`}>
               <Card.Img src="holder.js/100px270" alt="Card image" />
