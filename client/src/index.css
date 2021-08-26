@@ -21,27 +21,19 @@ body {
 }
 
 .nav-bar {
-  box-sizing: border-box;
-  width: 100%;
+  
   display: flex;
   justify-content: space-around;
   align-items: baseline;
   padding: 1em;
   background-color: rgb(32, 15, 189);
   color: #fff;
+  position: fixed;
+  top:0 ;
+  right: 0;
+  width: 100%;
 }
-@media only screen and (max-width:580px) {
-  .nav-bar{
-    box-sizing: border-box;
-    width: 110%;
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    background-color:yellowgreen;
 
-  }
-  
-}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
