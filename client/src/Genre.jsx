@@ -12,10 +12,11 @@ function Genre(props) {
   const matchAnime = props.anime.filter((ani) => {
     return ani.fields.genre === params.genre
   })
-  // console.log(matchAnime)
+
 
   return (
     <>
+
       {
         matchAnime.map((anime) => (
           <div>
@@ -24,19 +25,12 @@ function Genre(props) {
               <Card.Body>
                 <Card.Title>{anime.fields.genre}</Card.Title>
                 <Card.Text>
-                  {`Name:${anime.fields.name} Episodes:${anime.fields.episodes} Rating:${anime.fields.rating}`}
+                  {`Name:${anime.fields.name}   Episodes:${anime.fields.episodes}   Rating:${anime.fields.rating}/5`}
 
                 </Card.Text>
                 <Link to={`/show/${anime.id}`}>Link to Show</Link>
               </Card.Body>
             </Card>
-            {/* <h2>{anime.fields.name}</h2>
-            <h3>{anime.fields.episodes}</h3>
-            <h3>{anime.fields.genre}</h3>
-            <h3>{anime.fields.watchstatus}</h3>
-            <h3>{anime.fields.linktoanime}</h3>
-            <h3>{anime.fields.rating}</h3>
-            <Link to={`/show/${anime.id}`}>Link to Show</Link> */}
           </div>
         ))
       }

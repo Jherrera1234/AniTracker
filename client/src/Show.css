@@ -9,3 +9,39 @@
 .delete-button{
 width:250px;
 }
+
+.Shonen-show{
+  background-image: url("https://gonintendo.com/uploads/file_upload/upload/70594/Featured-Image-Shonen-Jump-wrong-better-Cropped.jpg");
+  height: 25vh;
+  opacity: .75;
+
+}
+
+.Isekai-show{
+  background-image: url("https://i0.wp.com/recommendmeanime.com/wp-content/uploads/2019/04/isekai-quartet-anime.jpeg?fit=1200%2C673&ssl=1");
+  height: 25vh;
+  opacity: .75;
+
+}
+
+.Horror-show{
+  background-image: url("https://thegeekiary.com/wp-content/uploads/2018/01/Shito.jpg");
+  height: 25vh;
+  opacity: .75;
+
+}
+
+.Slice-of-Life-show{
+  background-image: url("https://1.bp.blogspot.com/-6EGG_gLqjwc/XSZz8dTroEI/AAAAAAAAAxU/OzzaU-nL2-IhnRT-H1oRwUcHEmrpPE3ywCLcBGAs/s1600/Hyouka.jpg");
+  height: 25vh;
+  opacity: .75;
+}
+
+
+.Shonen-show, .Isekai-show, .Horror-show,.Slice-of-Life-show{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+

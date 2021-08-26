@@ -26,12 +26,12 @@ function Show(props) {
       {
         matchShow.map((anime) => (
           <div className='show-content'>
-            <h2>{`Title: ${anime.fields.name}`}</h2>
+            <h2 className={`${anime.fields.genre}-show`}>{`Title: ${anime.fields.name}`}</h2>
             <h3>{`Episodes watched: ${anime.fields.episodes}`}</h3>
             <h3>{`Genre: ${anime.fields.genre}`}</h3>
             <h3>{`Watch Status: ${anime.fields.watchstatus}`}</h3>
             <a href={`${anime.fields.linktoanime}`}>{`Link to anime: ${anime.fields.linktoanime}`}</a>
-            <h3>{`Rating: ${anime.fields.rating}`}</h3>
+            <h3>{`Rating: ${anime.fields.rating}/5`}</h3>
             <Link to={`/edit/${anime.id}`}>Edit Anime</Link>
             <br />
             <br />
