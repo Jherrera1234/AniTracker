@@ -10,7 +10,7 @@ import Nav from './Nav'
 import Footer from './Footer'
 import { arrOfGenresOptions } from './storage'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import './App.css'
 function App() {
   const [anime, setAnime] = useState([])
   const [genre, setGenre] = useState([])
@@ -38,9 +38,9 @@ function App() {
     <div>
       <Nav />
       <Route path='/' exact>
-        <form >
+        <form className='home-dropdown'>
           <label htmlFor='genres'>Genre: </label>
-          <select id='genres' onChange={(e) => setGenreSelect(e.target.value)} required>
+          <select id='home-genres' onChange={(e) => setGenreSelect(e.target.value)} required>
             <option value='' >Select an Anime</option>
             {arrOfGenresOptions.map((genre) => {
               return (

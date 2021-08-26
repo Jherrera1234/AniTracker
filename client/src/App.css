@@ -1,0 +1,14 @@
+body{
+  background: #6E75A8;
+}
+
+.home-dropdown{
+  display: flex;
+  justify-content: center;
+}
+
+#home-genres{
+  width: 500px;
+
+}
+

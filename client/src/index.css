@@ -5,35 +5,55 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-image: url("https://images.unsplash.com/photo-1559567951-34c59e05c08c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"); */
- 
 }
+
+
+
 .footer{
   margin-top: 1rem;
   padding: 1rem;
   display: flex;
   justify-content: center;
-  background-color: rgb(235, 195, 64);
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
+
+}
+.github-image{
+  width: 50px;
+  height: 50px;
+}
+.linkedin-image{
+  width: 50px;
+  height: 50px;
 }
 
-.nav-bar {
+
+/* @media only screen and (max-width:580px) {
+  .nav-bar{
+    box-sizing: border-box;
+    width: 110%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    background-color:yellowgreen;
+
+  }
   
-  display: flex;
-  justify-content: space-around;
-  align-items: baseline;
-  padding: 1em;
-  background-color: rgb(32, 15, 189);
-  color: #fff;
-  position: fixed;
-  top:0 ;
-  right: 0;
-  width: 100%;
 }
 
+@media  only screen and (max-width:400px){
+  .nav-bar{
+    box-sizing: border-box;
+    width: 125%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    background-color:yellowgreen;
+
+  }
+}  */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

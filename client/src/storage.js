@@ -1,6 +1,6 @@
 // array of genres
 
-export const arrOfGenres = ['Shonen', 'Isekai', 'Horror', 'Slice of Life']
+export const arrOfGenres = ['Shonen', 'Isekai', 'Horror', 'Slice-of-Life']
 
 //array of watchstatus
 
