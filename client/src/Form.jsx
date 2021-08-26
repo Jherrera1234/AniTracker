@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { baseURL, config } from './services'
-import { useParams } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
 import { arrOfGenres, arrOfWatchStatus } from './storage'
 import './Form.css'
 function Form(props) {
@@ -13,6 +13,7 @@ function Form(props) {
   const [rating, setRating] = useState('')
 
   const params = useParams()
+  const history = useHistory()
 
   useEffect(() => {
     if (params.id && props.anime.length > 0) {
@@ -45,7 +46,8 @@ function Form(props) {
       await axios.post(baseURL, { fields: newAnime }, config)
     }
     props.setToggleFetch(prevToggleFetch => !prevToggleFetch)
-
+    history.push(`/genre/${genre}`)
+    console.log(genre)
   }
   // console.log(arrOfGenres)
 
