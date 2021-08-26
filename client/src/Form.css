@@ -7,7 +7,7 @@
 
 .form-left-image, .form-right-image{
   width: 33%;
-  height:1000px;
+  height:150vh;
 
 }
 
@@ -18,5 +18,28 @@
   text-align: center;
   width: 75vh;
   margin: 0px 10px 500px 10px;
+}
+
+@media  only screen and (max-width:580px) {
+  .form-div{
+    display: flex;
+    flex-direction:row;
+    text-align: center;
+    justify-content: center;
+  }
+  .form-left-image, .form-right-image{
+    width: 35%;
+    height:150vh;
+  
+  }
+  .form-sub{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 33vh;
+    margin: 0px 10px 500px 10px;
+  }
+  
 }
 

@@ -30,7 +30,7 @@ height: 250px;
 .Shonen-card, .Isekai-card, .Horror-card,.Slice-of-Life-card{
   display: flex;
   align-content: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .Shonen-link, .Isekai-link, .Horror-link,.Slice-of-Life-link{

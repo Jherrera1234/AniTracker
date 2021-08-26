@@ -10,24 +10,15 @@ function Anime(props) {
     if (props.genreSelect === arrOfGenresOptions[0]) {
       const allGenres = props.genre.map((genre, index) => {
         return (
-          <div className={`${genre}-card`}>
-            <h1 className={`genre-${index}`} >{genre}</h1>
-            <br />
-            <Link className={`${genre}-link`} to={`/genre/${genre}`}> Go To Genre Page</Link>
+          <Link className={`${genre}-link`} to={`/genre/${genre}`}>
+            <div className={`${genre}-card`}>
+              <h1 className={`genre-${index}`} >{genre}</h1>
+              <br />
 
-            {/* <Card className={`genre-${index}`}>
-              <Card.Img src="holder.js/100px270" alt="Card image" />
-              <Card.ImgOverlay>
-                <Card.Title>{genre}</Card.Title>
-                <Card.Text>
-                  This is a wider card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.
-                </Card.Text>
-                <Link to={`/genre/${genre}`}> Go To Genre</Link>
-              </Card.ImgOverlay>
-            </Card> */}
-          </div>
 
+
+            </div>
+          </Link>
         )
       })
       return allGenres
@@ -35,12 +26,13 @@ function Anime(props) {
       return (
         <div>
           <Card className={arrOfGenresOptions[1]}>
-            <Card.Img variant="top" src="holder.js/100px180" src="https://gonintendo.com/uploads/file_upload/upload/70594/Featured-Image-Shonen-Jump-wrong-better-Cropped.jpg" />
+            <Link to={`/genre/${arrOfGenresOptions[1]}`}>
+              <Card.Img variant="top" src="holder.js/100px180" src="https://gonintendo.com/uploads/file_upload/upload/70594/Featured-Image-Shonen-Jump-wrong-better-Cropped.jpg" />
+            </Link>
             <Card.Body>
               <Card.Text>
                 {arrOfGenresOptions[1]}
               </Card.Text>
-              <Link to={`/genre/${arrOfGenresOptions[1]}`}> Go To Genre</Link>
             </Card.Body>
           </Card>
         </div>
@@ -49,12 +41,14 @@ function Anime(props) {
       return (
         <div>
           <Card className={arrOfGenresOptions[2]}>
-            <Card.Img variant="top" src="holder.js/100px180" src="https://i0.wp.com/recommendmeanime.com/wp-content/uploads/2019/04/isekai-quartet-anime.jpeg?fit=1200%2C673&ssl=1" />
+            <Link to={`/genre/${arrOfGenresOptions[2]}`}>
+              <Card.Img variant="top" src="holder.js/100px180" src="https://i0.wp.com/recommendmeanime.com/wp-content/uploads/2019/04/isekai-quartet-anime.jpeg?fit=1200%2C673&ssl=1" />
+            </Link>
             <Card.Body>
               <Card.Text>
                 {arrOfGenresOptions[2]}
               </Card.Text>
-              <Link to={`/genre/${arrOfGenresOptions[2]}`}> Go To Genre</Link>
+
             </Card.Body>
           </Card>
         </div>
@@ -63,12 +57,14 @@ function Anime(props) {
       return (
         <div>
           <Card className={arrOfGenresOptions[3]}>
-            <Card.Img variant="top" src="holder.js/100px180" src="https://thegeekiary.com/wp-content/uploads/2018/01/Shito.jpg" />
+            <Link to={`/genre/${arrOfGenresOptions[3]}`}>
+              <Card.Img variant="top" src="holder.js/100px180" src="https://thegeekiary.com/wp-content/uploads/2018/01/Shito.jpg" />
+            </Link>
             <Card.Body>
               <Card.Text>
                 {arrOfGenresOptions[3]}
               </Card.Text>
-              <Link to={`/genre/${arrOfGenresOptions[3]}`}> Go To Genre</Link>
+
             </Card.Body>
           </Card>
         </div>
@@ -77,12 +73,14 @@ function Anime(props) {
       return (
         <div>
           <Card className={arrOfGenresOptions[4]}>
-            <Card.Img variant="top" src="holder.js/100px180" src="https://1.bp.blogspot.com/-6EGG_gLqjwc/XSZz8dTroEI/AAAAAAAAAxU/OzzaU-nL2-IhnRT-H1oRwUcHEmrpPE3ywCLcBGAs/s1600/Hyouka.jpg" />
+            <Link to={`/genre/${arrOfGenresOptions[4]}`}>
+              <Card.Img variant="top" src="holder.js/100px180" src="https://1.bp.blogspot.com/-6EGG_gLqjwc/XSZz8dTroEI/AAAAAAAAAxU/OzzaU-nL2-IhnRT-H1oRwUcHEmrpPE3ywCLcBGAs/s1600/Hyouka.jpg" />
+            </Link>
             <Card.Body>
               <Card.Text>
                 {arrOfGenresOptions[4]}
               </Card.Text>
-              <Link to={`/genre/${arrOfGenresOptions[4]}`}> Go To Genre</Link>
+
             </Card.Body>
           </Card>
         </div>

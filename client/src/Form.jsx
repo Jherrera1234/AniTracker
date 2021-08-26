@@ -75,7 +75,7 @@ function Form(props) {
 
         <label htmlFor='genre'>Genre: </label>
         <select id='genre' onChange={(e) => setGenre(e.target.value)} required>
-          <option value='' >Select a Genre</option>
+          <option value='' disabled selected hidden>Select a Genre</option>
           {arrOfGenres.map((genre) => {
             return (
               <option value={genre}>{genre}</option>

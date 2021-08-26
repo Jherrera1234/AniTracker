@@ -1,0 +1,10 @@
+.nav-bar {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  padding: 1em;
+  background-color: rgb(32, 15, 189);
+  color: #fff;
+}

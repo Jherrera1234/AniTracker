@@ -27,8 +27,20 @@ body {
   justify-content: space-around;
   align-items: baseline;
   padding: 1em;
-  background-color: rgb(192, 45, 26);
+  background-color: rgb(32, 15, 189);
   color: #fff;
+}
+@media only screen and (max-width:580px) {
+  .nav-bar{
+    box-sizing: border-box;
+    width: 110%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    background-color:yellowgreen;
+
+  }
+  
 }
 
 code {
