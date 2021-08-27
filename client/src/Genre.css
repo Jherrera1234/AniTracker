@@ -20,14 +20,19 @@
 
 @media only screen and (max-width:450px)  {
   .card-img-left{
-    width:50%;
-    height: 205px;
+    width: 100px;
+
+    
   }
   
   #card-genre {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+  }
+  #anime-fields-genre{
+    background-color:beige;
+    font-family: "CopperPlate",  fantasy;
   }
   
 }

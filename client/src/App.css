@@ -13,3 +13,19 @@ body{
 
 }
 
+@media only screen and (max-width:450px)  {
+  body{
+    background-color: beige;
+
+  }
+  .home-dropdown{
+    display: flex;
+    justify-content: center;
+    font-family: "Copperplate";
+    background-color: brown;
+  }
+
+}
+  
+
+
