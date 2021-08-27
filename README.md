@@ -1,3 +1,4 @@
+
 # aniTracker
 [AniTracker](https://anitrackers.netlify.app/)
 
@@ -6,10 +7,10 @@
 The project will be using react to make an app that tracks what a user watches pretaining to anime. The user will be able to navaigate a home page that list the genre of anime and be able to click the banner images to go to the genre page of the specific genre. The user will then have the list of anime they have watched in card style. The user will then be able to click on the anime there will be a button to edit, add or delete the anime. 
 
 ## Wireframe
+<img width="1350" alt="Screen Shot 2021-08-27 at 10 07 19 AM" src="https://user-images.githubusercontent.com/56912648/131149798-6ed14788-88b7-4b70-819c-9145df0d7e64.png">
 
-![image]()
 ## Component Hierarchy
-![image]()
+<img width="1062" alt="Screen Shot 2021-08-27 at 10 08 07 AM" src="https://user-images.githubusercontent.com/56912648/131149861-ea15ca80-8dfa-4a42-b78a-9b5257904d82.png">
 
 ##API 
 The api will be used to obtain name of the anime, episode the person is on, genre of anime, rating, watch status, and link to anime.
