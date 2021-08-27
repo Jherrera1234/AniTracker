@@ -7,9 +7,9 @@ The project will be using react to make an app that tracks what a user watches p
 
 ## Wireframe
 
-[AniTracker-WireFrame](https://whimsical.com/anime-tracker-app-RTQhwSW7Niagbe5vc2o1hj)
+![image]()
 ## Component Hierarchy
-[Component-Hierarchy](https://whimsical.com/component-hierarchy-GLo5rFuW8fgFn2wwqBV4ab)
+![image]()
 
 ##API 
 The api will be used to obtain name of the anime, episode the person is on, genre of anime, rating, watch status, and link to anime.
