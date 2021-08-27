@@ -49,7 +49,7 @@ function Form(props) {
     history.push(`/genre/${genre}`)
     console.log(genre)
   }
-  // console.log(arrOfGenres)
+
 
   return (
     <div className='form-div'>

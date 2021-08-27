@@ -4,7 +4,7 @@ import { baseURL, config } from './services'
 import { useEffect, useHistory } from 'react-router-dom'
 import './Show.css'
 function Show(props) {
-  // const { name } = props.anime.fields
+
 
   const params = useParams()
   const history = useHistory()
@@ -12,7 +12,7 @@ function Show(props) {
   const matchShow = props.anime.filter((ani) => {
     return ani.id === params.id
   })
-  // console.log(matchShow.id)
+
 
 
   const handleDelete = async () => {
@@ -41,7 +41,7 @@ function Show(props) {
       }
 
       <br />
-      {/* <button className='delete-button' onClick={handleDelete}>Delete Anime</button> */}
+
     </article>
   )
 

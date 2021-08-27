@@ -23,12 +23,12 @@ function App() {
 
     const fetchAnime = async () => {
       const resp = await axios.get(baseURL, config)
-      // console.log(resp.data.records)
+
       setAnime(resp.data.records)
-      // console.log(resp.data.records)
+
     }
     fetchAnime()
-    // setGenre(arrOfGenres)
+
   }, [toggleFetch])
 
 

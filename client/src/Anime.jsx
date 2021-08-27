@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card';
 import './Anime.css'
 
 function Anime(props) {
-  // const [genre, setGenre] = useState('')
+
   const getGenre = (() => {
     if (props.genreSelect === arrOfGenresOptions[0]) {
       const allGenres = props.genre.map((genre, index) => {
