@@ -12,7 +12,7 @@ function Genre(props) {
   const matchAnime = props.anime.filter((ani) => {
     return ani.fields.genre === params.genre
   })
-  console.log(params.genre)
+
 
   return (
     <>

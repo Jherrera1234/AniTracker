@@ -87,7 +87,7 @@ function Anime(props) {
       )
     }
   })
-  console.log(props.genre)
+
   return (
     <>
       {getGenre()}
