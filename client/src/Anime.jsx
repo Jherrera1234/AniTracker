@@ -11,7 +11,7 @@ function Anime(props) {
       const allGenres = props.genre.map((genre, index) => {
         return (
           <Link className={`${genre}-link`} to={`/genre/${genre}`}>
-            <div className={`${genre}-card`}>
+            <div id='genre-home-card' className={`${genre}-card`}>
               <h1 className={`genre-${index}`} >{genre}</h1>
               <br />
 

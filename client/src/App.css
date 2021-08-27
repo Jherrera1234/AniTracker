@@ -5,6 +5,7 @@ body{
 .home-dropdown{
   display: flex;
   justify-content: center;
+  font-family: "Copperplate";
 }
 
 #home-genres{
